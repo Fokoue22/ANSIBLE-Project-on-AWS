@@ -1,0 +1,61 @@
+# Play1: cnfigure apache on amazon linux 2 hosts 
+- name: setting up apache webserver on amazon linux nodes 
+  hosts: linux-nodes 
+  tasks:
+    - name: Upgrade all packages on the server # yum update -y
+      ansible.builtin.yum:
+         name: '*'
+         state: latest
+    - name: Install the latest version of apache # yum install httpd -y
+      ansible.builtin.yum:
+         name: httpd 
+         state: latest
+    - name: Start service httpd, if not started # systemctl start httpd
+      ansible.builtin.service:
+         name: httpd
+         state: started 
+    - name: Enable service httpd, and not touch the state # systemctl start httpd
+      ansible.builtin.service:
+         name: httpd
+         enabled: yes 
+    - name: Copy index.html file from the contoller to the nodes at /var/www/htlm/  # echo "hello" > /var/www/html/index.html
+      ansible.builtin.copy:
+         src: /root/web/index.html
+         dest: /var/www/html/
+
+# Play2: configure apche on ubuntu hosts
+- name: setting up apache webserver on ubuntu nodes  
+  hosts: ubuntu-nodes 
+  tasks:
+    - name: Update all packages on the server to thier latest version # yum update -y
+      ansible.builtin.apt:
+         name: '*'
+         state: latest
+    - name: Install the latest version of apache # the state=present is optional 
+      ansible.builtin.apt:
+         name: apache2 
+         state: present
+    - name: Copy index.html file from the contoller to the nodes at /var/www/htlm/  # echo "hello" > /var/www/html/index.html
+      ansible.builtin.copy:
+         src: /root/web/index.html
+         dest: /var/www/html/
+
+# Play3: Install Git on linux hosts
+- name: install git on linux hosts
+  hosts: linux-nodes 
+  tasks:
+    - name: Install git 
+      yum:
+         name: git
+         state: present
+         update_cache: yes
+
+# Play4: Install Git on ubuntu hosts
+- name: install git on ubuntu hosts  
+  hosts: ubuntu-nodes 
+  tasks:
+    - name: Install git 
+      apt:
+         name: git
+         state: present
+         update_cache: yes
