@@ -18,6 +18,7 @@ Installed ansible on linux-ansible-controller:
 ![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/b44759ac-f49a-4102-acee-deaae6d83818)
 
 Verified ansible is installed in linux-ansible-controller. And generated ssh key-pair. Copied the public key to all 4 nodes:
+
 <img width="512" alt="image" src="https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/088d1bbd-a60b-441e-9b36-99c90b0a2390">
 
 Updated “hosts” file in ansible-controller.
