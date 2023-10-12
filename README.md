@@ -1,8 +1,10 @@
 # ANSIBLE-Project-on-AWS
 This repo will contain all ansible playbook project use for AWS
-![Alt text](Ansible-ubuntu-controller-1.png)
 
 # Ansible Playbook Project1
+Setup an Ansible cluster with the controller running on Amazon Linux 2 and the 4 nodes in which 2 running on Amazon linux and 2 running on ubuntu.
+
+![Alt text](Ansible-ubuntu-controller-1.png)
 Write a playbook with four (4) plays:
 Play1: Deploy apache on ubuntu clients
 Play2: Deploy apache on amazon clients
@@ -10,7 +12,6 @@ Play3: Deploy git on amazon linux clients
 Play4: Deploy git on ubuntu clients
 
 # STEPS BY STEPS PROCESS 
-Setup an Ansible cluster with the controller running on Amazon Linux 2 and the 4 nodes in which 2 running on linux 2 and 2 running on ubuntu
 Launched 3 amazon linux 2 and 2 ubuntu server:
 ![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/652c366e-9281-4c62-ab97-9560917463e8)
 
