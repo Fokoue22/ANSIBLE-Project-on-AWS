@@ -2,7 +2,7 @@
 This repo contain all ansible playbook project for AWS
 
 # Ansible Playbook Project1
-Setup an Ansible cluster with the controller running on Amazon Linux 2 and the 4 nodes in which 2 running on Amazon linux and 2 running on ubuntu.
+## Setup an Ansible cluster with the controller running on Amazon Linux 2 and the 4 nodes in which 2 running on Amazon linux and 2 running on ubuntu.
 
 ![Alt text](Ansible-ubuntu-controller-1.png)
 
