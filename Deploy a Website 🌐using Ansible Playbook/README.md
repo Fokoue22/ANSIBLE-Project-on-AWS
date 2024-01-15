@@ -9,21 +9,27 @@ Create 4EC2 instances. Out of 4, One will be the `Ansible Controller` and the ot
 
 ![Alt text](image-1.png)
   
-2. Add ansible repository to your instance
+2. Update the package index:
 ```
-sudo apt-add-repository ppa:ansible/ansible
+sudo yum update -y
 
 ```
-3. Update the package 
+3. Install the latest version of Ansible by adding the EPEL repository and installing the package: 
 ```
-sudo apt update
+sudo yum install -y epel-release
 
 ```
 4. Install the Ansible 
 ```
-sudo apt install ansible
+sudo yum install -y ansible
 
 ```
+5. Verify the installation by checking the version of Ansible: 
+```
+ansible — version
+
+```
+![Alt text](image-2.png)
 
 ### `In steps 2`  `ADD JENKINS TO DEBIAN REPO`
 1. We do this by using the Long term support release 
