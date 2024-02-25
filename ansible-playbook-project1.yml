@@ -7,21 +7,21 @@
          name: '*'
          state: latest
     - name: Install the latest version of apache # yum install httpd -y
-      ansible.builtin.yum:
+      ansible.builtin.yum: # This is the name of the module i use
          name: httpd 
-         state: latest
+         state: latest # this will update the package to the latest while present will ensure that the disered package is install.
     - name: Start service httpd, if not started # systemctl start httpd
-      ansible.builtin.service:
+      ansible.builtin.service: # the service module 
          name: httpd
          state: started 
-    - name: Enable service httpd, and not touch the state # systemctl start httpd
+    - name: Enable service httpd, and not touch the state # systemctl start httpd "this command will allow you to reboot the system when it goes down"
       ansible.builtin.service:
          name: httpd
          enabled: yes 
     - name: Copy index.html file from the contoller to the nodes at /var/www/htlm/  # echo "hello" > /var/www/html/index.html
       ansible.builtin.copy:
-         src: /root/web/index.html
-         dest: /var/www/html/
+         src: /root/web/index.html # this is the source of the file which is the CONTROLLER
+         dest: /var/www/html/ # this is the destination of our file which is the CLIENTS
 
 # Play2: configure apche on ubuntu hosts
 - name: setting up apache webserver on ubuntu nodes  
