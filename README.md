@@ -4,7 +4,7 @@ This repo contain all ansible playbook project for AWS
 # Ansible Playbook Project1
 ## Setup an Ansible cluster with the controller running on Amazon Linux 2 and the 4 nodes in which 2 running on Amazon linux and 2 running on ubuntu.
 
-![Alt text](Ansible-ubuntu-controller-1.png)
+![Alt text](images/achitecture-Ansible-ubuntu-controller.png)
 
 ### Write a playbook with four (4) plays:
 * Play1: Deploy apache on ubuntu clients
@@ -21,7 +21,7 @@ This repo contain all ansible playbook project for AWS
 ### 2. Installed ansible on linux-ansible-controller:
 - Take up you privilage. the first command for ubuntu and the second for linux. 
 ```
-sudo su -
+sudo su - ubuntu
 ```
 ```
 sudo su - ec2-user
@@ -48,14 +48,36 @@ sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 ```
+![Alt text](images/ansible-install.png)
+
+### 3. Establish SSH connection between Ansible master(controller) and clients(nodes)
+#### To do this we need to first generate ssh key pair "id_rsa.pub public key"
+
+- First is to connect as a sudo (the root user) with the command below 
+```
+ sudo -i
+```
+- Then we generate our key as a root user
+```
+ ssh-keygen -t rsa
+```
+- Let go to the location where the keys have been created
+```
+ cd .ssh
+```
+```
+ ls -l
+```
+
+- Now, let cat into the pub key and copie. This pub key will be use for our nodes
+```
+ cat id_rsa.pub
+```
+![Alt text](images/key-generate.png)
+
+
 - We notice that our cfn-lint is not install so we use the command copie from our officail git repo of cfn-lint shown above
-```
- pip3 install cfn-lint
-```
-
-[this page](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/deploy.html)
-
-
+- We notice that our cfn-lint is not install so we use the command copie from our officail git repo of cfn-lint shown above
 
 
 ![Alt text](images/buildstage1.png)
