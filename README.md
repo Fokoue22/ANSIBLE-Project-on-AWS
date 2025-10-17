@@ -14,14 +14,54 @@ This repo contain all ansible playbook project for AWS
 
 # STEPS BY STEPS PROCESS 
 
-### 1. Launched 3 amazon linux 2 and 2 ubuntu server:
-
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/652c366e-9281-4c62-ab97-9560917463e8)
+### 1. Launched 3 amazon linux and 2 ubuntu server:
+![Alt text](images/ec2-intance.png)
 
 
 ### 2. Installed ansible on linux-ansible-controller:
+- Take up you privilage. the first command for ubuntu and the second for linux. 
+```
+sudo su -
+```
+```
+sudo su - ec2-user
+```
+- let rename our ubuntu server to "ansible-controller"
+```
+sudo hostname ansible-controller
+```
+- For the command to take effect you need to exit(with the command bellow) and login again(with the fist command above)
+```
+exit
+```
+- let verifie if python3 and ansible is install 
+```
+ python3 --version
+```
+```
+ ansible --version
+```
+- After the verification we notice ansible is not install. So we need to go to the officail documentation [this page](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html) depending on our OS we follow the steps and install. For us is Installing Ansible on Ubuntu 
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+```
+- We notice that our cfn-lint is not install so we use the command copie from our officail git repo of cfn-lint shown above
+```
+ pip3 install cfn-lint
+```
 
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/b44759ac-f49a-4102-acee-deaae6d83818)
+[this page](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/deploy.html)
+
+
+
+
+![Alt text](images/buildstage1.png)
+![Alt text](images/buildstage2.png)
+
+
 
 
 ### 3. Verified ansible is installed in linux-ansible-controller. And generated ssh key-pair. Copied the public key to all 4 nodes:
@@ -67,7 +107,8 @@ This repo contain all ansible playbook project for AWS
 
 
 
-
+## Author
+FOKOUE THOMAS
 
 
 
