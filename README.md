@@ -105,6 +105,7 @@ sudo apt install ansible
 ```
  ssh root@private-ip-address
 ```
+![Alt text](images/test-connectivity.png)
 
 ### 6. Let updated our Inventory file “hosts” file in ansible-controller.
 - First thing to do is to cd into etc/ansible
