@@ -107,7 +107,7 @@ sudo apt install ansible
 ```
 ![Alt text](images/test-connectivity.png)
 
-### 6. Let updated our Inventory file “hosts” file in ansible-controller.
+### 6. Adding clients to Ansible AWS Inventory. Here Let updated our Inventory file “hosts” file in ansible-controller.
 - First thing to do is to cd into etc/ansible
 ```
  cd /etc/ansible/
