@@ -165,26 +165,26 @@ sudo apt install ansible
 ![Alt text](images/playbook-2.png)
 
 
-### 7. Connect to linux-node1 i.e. “ansible-linux-node1” and verify that index.html file is written in /var/www/html
+### 9. Connect to linux-node1 i.e. “ansible-linux-node1” and verify that index.html file is written in /var/www/html
 ```
  ls /var/www/html/
 ```
 ```
  cat /var/www/html/index.html
 ```
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/a0ab4ddc-f45f-4797-b57e-50ded432d027)
+![Alt text](images/linux-verify-html.png)
 
 
-### 8. Connect to ubuntu nodes i.e. “ubuntu-node” and verify that index.html file is written in /var/www/html
+### 10. Connect to ubuntu nodes i.e. “ubuntu-node” and verify that index.html file is written in /var/www/html
 
 ![Alt text](images/ubuntu-verify-html.png)
 
 
-### 9. Verify GIT is installed in both linux and ubuntu nodes:
+### 11. Verify GIT is installed in both linux and ubuntu nodes:
 ```
  git --version
 ```
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/8c53e5b4-d676-4d7e-bee9-9435f725447c)
+![Alt text](images/linux-verify-git.png)
 
 ![Alt text](images/ubuntu-verify-git.png)
 
