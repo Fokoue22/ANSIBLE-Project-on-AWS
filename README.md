@@ -142,21 +142,31 @@ sudo apt install ansible
 
 - We can as well ping base on the tag giving to our inventory file "ubuntu" and "linux". 
 
-![Alt text](images/ping-base-tags.png
-)
-### 4. Updated “hosts” file in ansible-controller.
+![Alt text](images/ping-base-tags.png)
 
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/ae396a32-ee5a-4d9a-af68-18d0a6fb98ff)
+### 6. Run ansible-playbook-project1.yml file
+- First thing to do is to create this path "/root/web/index.html" on the controller, so we must have that file before running your playbook
+```
+ sudo mkdir -p /root/web
+ echo "<h1>Hello from Ansible</h1>" | sudo tee /root/web/index.html
+
+```
+- The playbook need to be run in the controller as a root user 
+```
+ vi ansible-playbook-project1.yml
+```
+![Alt text](images/ansible-playbook.png)
+#### Don't forget to update the host name with name present in your inventory file. 
+- Then you run the command below to for ansible to run your playbook 
+```
+ ansible-playbook ansible-playbook-project1.yml
+```
+![Alt text](images/playbook-1.png)
+![Alt text](images/playbook-2.png)
 
 
-### 5. Test the connectivity in-between the controller and nodes:
-
-<img width="590" alt="image" src="https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/dffc2ab1-b43b-4a9e-bb38-ba771cc1cbd0">
-
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/a0f79a1a-2dd3-410c-bdde-452a0f8c9c46)
 
 
-### 6. Run ansible-hw-playbook.yml file
 
 ![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/e7502d8e-7abf-4fb0-b97c-775c844cd65d)
 

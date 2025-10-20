@@ -1,6 +1,6 @@
 # Play1: cnfigure apache on amazon linux 2 hosts 
 - name: setting up apache webserver on amazon linux nodes 
-  hosts: linux-nodes 
+  hosts: linux # this hosts name depend on the hosts name giving in our inventory file in the ansible-controller
   tasks:
     - name: Upgrade all packages on the server # yum update -y
       ansible.builtin.yum:
@@ -25,7 +25,7 @@
 
 # Play2: configure apche on ubuntu hosts
 - name: setting up apache webserver on ubuntu nodes  
-  hosts: ubuntu-nodes 
+  hosts: ubuntu 
   tasks:
     - name: Update all packages on the server to thier latest version # yum update -y
       ansible.builtin.apt:
@@ -42,7 +42,7 @@
 
 # Play3: Install Git on linux hosts
 - name: install git on linux hosts
-  hosts: linux-nodes 
+  hosts: linux 
   tasks:
     - name: Install git 
       yum:
@@ -52,7 +52,7 @@
 
 # Play4: Install Git on ubuntu hosts
 - name: install git on ubuntu hosts  
-  hosts: ubuntu-nodes 
+  hosts: ubuntu 
   tasks:
     - name: Install git 
       apt:
