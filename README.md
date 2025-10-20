@@ -189,8 +189,9 @@ sudo apt install ansible
 ![Alt text](images/ubuntu-verify-git.png)
 
 
+### 12. Use your "Public IPv4 address" to see the content of your html file 
 
-
+![Alt text](images/webpage.png)
 
 ## Author
 FOKOUE THOMAS
