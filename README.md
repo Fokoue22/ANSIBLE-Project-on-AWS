@@ -144,8 +144,8 @@ sudo apt install ansible
 
 ![Alt text](images/ping-base-tags.png)
 
-### 6. Run ansible-playbook-project1.yml file
-- First thing to do is to create this path "/root/web/index.html" on the controller, so we must have that file before running your playbook
+### 8. Run ansible-playbook-project1.yml file
+- First thing to do is to create this path "/root/web/index.html" for our index.html file on the controller, so we must have that file before running your playbook
 ```
  sudo mkdir -p /root/web
  echo "<h1>Hello from Ansible</h1>" | sudo tee /root/web/index.html
@@ -165,28 +165,20 @@ sudo apt install ansible
 ![Alt text](images/playbook-2.png)
 
 
-
-
-
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/e7502d8e-7abf-4fb0-b97c-775c844cd65d)
-
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/2557550e-851e-4ef5-accf-98254a3a55b4)
-
-
 ### 7. Connect to linux-node1 i.e. “ansible-linux-node1” and verify that index.html file is written in /var/www/html
 
 ![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/a0ab4ddc-f45f-4797-b57e-50ded432d027)
 
 
-### 8. Connect to ubuntu-node1 i.e. “ansible-node1” and verify that index.html file is written in /var/www/html
+### 8. Connect to ubuntu nodes i.e. “ubuntu-node” and verify that index.html file is written in /var/www/html
 
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/a73aef8d-0195-45e5-b497-4cde2b51104b)
+![Alt text](images/ubuntu-verify-html.png)
 
 
 ### 9. Verify GIT is installed in both linux and ubuntu nodes:
 ![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/8c53e5b4-d676-4d7e-bee9-9435f725447c)
 
-![image](https://github.com/Fokoue22/ANSIBLE-Project-on-AWS/assets/117523566/390358c6-d5c5-4ec5-9521-8346ec8e6aa7)
+![Alt text](images/ubuntu-verify-git.png)
 
 
 
