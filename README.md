@@ -1,10 +1,26 @@
 # ANSIBLE-Project-on-AWS
-This repo contain all ansible playbook project for AWS
+This project demonstrates how to set up and manage a hybrid Ansible cluster with an Ubuntu-based controller managing four clients — two running Amazon Linux and two running Ubuntu.
+The setup showcases infrastructure automation, configuration management, and software provisioning across multiple operating systems using Ansible.
 
 # Ansible Playbook Project1
 ## Setup an Ansible cluster with the controller running on Amazon Linux 2 and the 4 nodes in which 2 running on Amazon linux and 2 running on ubuntu.
 
 ![Alt text](images/achitecture-Ansible-ubuntu-controller.png)
+
+🚀 Key Features
+
+- Cross-platform configuration management with Ansible
+- Automated SSH setup for secure node communication
+- Centralized orchestration of updates and deployments
+- Execution of playbooks for package installation, service configuration, and testing
+
+🛠️ Technologies Used
+
+- Ansible (Automation Engine)
+- Amazon Linux 2
+- Ubuntu 20.04 / 22.04
+- SSH for remote communication
+- YAML for playbook definitions
 
 ### Write a playbook with four (4) plays:
 * Play1: Deploy apache on ubuntu clients
